@@ -21,4 +21,14 @@ body {
   width: 4rem;
   height: 4rem;
   margin: 2rem;
+  position: relative;
+}
+
+.target-box {
+  border: 1px solid blue;
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  width: 4rem;
+  height: 4rem;
 }
