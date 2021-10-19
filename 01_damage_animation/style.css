@@ -1,3 +1,18 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.enemy-box {
+  border: 1px solid #000;
+  position: relative;
+  background-color: black;
+}
+
 .enemy {
   border: 3px solid red;
   background-color: salmon;
@@ -5,4 +20,72 @@
   width: 4rem;
   height: 4rem;
   margin: 7rem;
+}
+
+.damage-box {
+  /* border: 1px solid blue; */
+  position: absolute;
+  top: 7rem;
+  left: 7rem;
+  height: 4rem;
+  width: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.damage {
+  font-size: 2rem;
+  /* border: 1px solid green; */
+  font-weight: bold;
+  color: #ff7c00;
+  background: -webkit-linear-gradient(
+    top,
+    #ff7f04 0%,
+    #ff7c00 50%,
+    #ffa73d 51%,
+    #ffb76b 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0;
+}
+
+.damage--critical {
+  font-size: 2.5rem;
+  color: #ff0077;
+  background: -webkit-linear-gradient(
+    top,
+    #ff0479 0%,
+    #ff0095 50%,
+    #ff3d8e 51%,
+    #ff6b9c 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.damage-button {
+  padding: 1rem;
+}
+
+.damage-animate {
+  animation: damage-animate 1s forwards;
+}
+
+@keyframes damage-animate {
+  0% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+
+  70% {
+    opacity: 1;
+    transform: translateY(-3.5rem);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(-3.5rem);
+  }
 }
