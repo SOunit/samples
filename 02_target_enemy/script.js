@@ -7,6 +7,9 @@
 
   targetBox1.addEventListener('click', () => {
     target1.classList.toggle('target-on');
+    if (target2.classList.contains('target-on')) {
+      target2.classList.remove('target-on');
+    }
   });
 
   // target box 2
@@ -18,5 +21,8 @@
 
   targetBox2.addEventListener('click', () => {
     target2.classList.toggle('target-on');
+    if (target1.classList.contains('target-on')) {
+      target1.classList.remove('target-on');
+    }
   });
 })();
